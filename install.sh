@@ -44,5 +44,7 @@ chmod +x ./deploy_sql_mcs.sh
 chmod +x ./deploy_sql_vis.sh
 ./deploy_sql_vis.sh
 
+echo "127.0.0.1       nsqd" >> /etc/hosts
+
 echo "DONE !!!"
 
