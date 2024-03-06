@@ -19,10 +19,10 @@ if [ $? -ne 0 ]; then
     
     wget https://www.johnvansickle.com/ffmpeg/old-releases/${VERSION}.tar.xz
     tar -xzf ${VERSION}.tar.xz
-    sudp cp ${VERSION}/ff* /usr/bin/
+    cp ${VERSION}/ff* /usr/bin/
 fi
 
 programExists docker-compose
 if [ $? -ne 0 ]; then
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    apt-get install docker-compose
 fi

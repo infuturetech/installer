@@ -37,7 +37,7 @@ install video-process-service vps
 
 cd output/deploy
 docker-compose up -d
-sleep 10
+sleep 30
 chmod +x ./deploy_sql.sh
 ./deploy_sql.sh
 chmod +x ./deploy_sql_mcs.sh
