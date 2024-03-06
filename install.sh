@@ -15,9 +15,7 @@ install() {
 
 prepare() {
     rm -rf output || mkdir output
-    cd output
-    wget https://github.com/infuturetech/installer/releases/download/debug-20240306/infuturetech-9fdcf68-20240306.tar.gz
-    tar -xzf infuturetech-9fdcf68-20240306.tar.gz
+    cd output && wget https://github.com/infuturetech/installer/releases/download/debug-20240306/infuturetech-9fdcf68-20240306.tar.gz && tar -xzf infuturetech-9fdcf68-20240306.tar.gz
     cd -
 }
 
