@@ -30,4 +30,5 @@ build video-process-service feat/v2
 SUFFIX_GIT=$(git rev-parse --short HEAD)
 SUFFIX_DATE=$(date "+%Y%m%d")
 cd output 
+mv algo-manager-service/cli client/test/
 tar -zcvf ./infuturetech-${SUFFIX_GIT}-${SUFFIX_DATE}.tar.gz ./
