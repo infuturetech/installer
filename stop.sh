@@ -13,3 +13,4 @@ stop gateway
 stop sms
 stop vis
 stop vps
+docker-compose stop 
