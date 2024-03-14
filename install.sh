@@ -17,8 +17,8 @@ prepare() {
     rm -rf output || true
     mkdir output
     cd output 
-    wget https://github.com/infuturetech/installer/releases/download/debug-20240306/infuturetech-9fdcf68-20240306.tar.gz 
-    tar -xzf infuturetech-9fdcf68-20240306.tar.gz
+    wget https://github.com/infuturetech/installer/releases/download/debug-20240315/infuturetech-f6a417c-20240314.tar.gz
+    tar -xzf infuturetech-f6a417c-20240314.tar.gz
     cd -
 }
 
@@ -35,17 +35,13 @@ install system-manager-service sms
 install video-ingress-service vis
 install video-process-service vps
 
-cd output/deploy
-docker-compose up -d
-sleep 30
-chmod +x ./deploy_sql.sh
-./deploy_sql.sh
-chmod +x ./deploy_sql_mcs.sh
-./deploy_sql_mcs.sh
-chmod +x ./deploy_sql_vis.sh
-./deploy_sql_vis.sh
+cp ./output/deploy/docker-compose.yml ${ROOT}/
+docker-compose -f ${ROOT}/docker-compose.yml up -d
 
 echo "127.0.0.1       nsqd" >> /etc/hosts
+echo "wait mysql ready ..."
+sleep 60
 
+./dep_db.sh
 echo "DONE !!!"
 

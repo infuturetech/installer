@@ -31,4 +31,5 @@ SUFFIX_GIT=$(git rev-parse --short HEAD)
 SUFFIX_DATE=$(date "+%Y%m%d")
 cd output 
 mv algo-manager-service/cli client/test/
+mv algo-manager-service/luaapp client/test/
 tar -zcvf ./infuturetech-${SUFFIX_GIT}-${SUFFIX_DATE}.tar.gz ./

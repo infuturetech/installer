@@ -13,4 +13,4 @@ stop gateway
 stop sms
 stop vis
 stop vps
-docker-compose stop 
+docker-compose -f /infuturetech/docker-compose.yml down 
