@@ -1,4 +1,7 @@
-TF_VERSION=2.13.0
-ARCH=$(dpkg --print-architecture)
-wget https://github.com/ika-rwth-aachen/libtensorflow_cc/releases/download/v${TF_VERSION}/libtensorflow-cc_${TF_VERSION}_${ARCH}.deb
-sudo docker build -t algo:v1 -f algo.Dockerfile .
+NAME=wrapper-20240618-3f55fd9.tar.gz
+wget https://github.com/infuturetech/installer/releases/download/debug/${NAME}
+tar -xzf ${NAME}
+
+echo "install wrapper to /usr/local/"
+rm -rf /usr/local/wrapper || true
+mv wrapper /usr/local/

@@ -2,4 +2,5 @@
 output
 output.tar.gz
 *.deb
+*.tar.gz
 resources
