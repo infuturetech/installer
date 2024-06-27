@@ -23,6 +23,7 @@ buildInDocker() {
     cd ${project}
     git checkout ${branch}
     sudo ./build_in_docker.sh
+    sudo chown -R nvidia:nvidia ./output
     mv ./output ${ROOT}/installer/output/$1
     cd -
 }
