@@ -7,7 +7,6 @@ watch() {
 watch cms
 watch ams
 watch ims
-watch mcs
 watch gateway
 watch sms
 watch vis

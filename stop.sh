@@ -8,7 +8,6 @@ stop() {
 stop cms
 stop ams
 stop ims
-stop mcs
 stop gateway
 stop sms
 stop vis

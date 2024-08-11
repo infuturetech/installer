@@ -28,12 +28,11 @@ buildInDocker() {
     cd -
 }
 
-buildInDocker algo-manager-service feat/v4
+buildInDocker algo-manager-service wqg/v4_lua_algo
 build client feat/v4
 build config-manager-service feat/v4
 build deploy main
 build image-manager-service feat/v4
-build manage-core-service feat/v4
 build open-gateway feat/v4
 build system-manager-service feat/v4
 build video-ingress-service feat/v4
