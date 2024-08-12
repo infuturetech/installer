@@ -38,12 +38,12 @@ prepare() {
     rm -rf output || true
     mkdir output
     cd output 
-    wget https://github.com/infuturetech/installer/releases/download/debug-20240315/infuturetech-dd33306-20240315.tar.gz
-    tar -xzf infuturetech-dd33306-20240315.tar.gz
+    wget https://github.com/infuturetech/installer/releases/download/debug-v4/infuturetech-73264ab-20240812.tar.gz
+    tar -xzf infuturetech-73264ab-20240812.tar.gz
     cd -
 }
 
-# prepare
+prepare
 
 mkdir -p ${ROOT}
 
