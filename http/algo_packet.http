@@ -1,0 +1,28 @@
+
+###
+
+GET http://192.168.21.2:8088/openapi/v1/algo/packet/list HTTP/1.1
+
+###
+
+POST http://{{IP}}:8088/openapi/v1/algo/packet/upload HTTP/1.1
+content-type: application/json
+
+{
+    "uri": "/home/nvidia/Gopath/src/github.com/infuturetech/gosdk/runtime/luart/demo.tar.gz"
+}
+
+###
+
+POST http://192.168.21.5:8088/openapi/v1/algo/packet/update HTTP/1.1
+content-type: application/json
+
+{
+    "uri": "/home/nvidia/Gopath/src/github.com/infuturetech/gosdk/runtime/luart/demo.tar.gz"
+}
+
+### 
+POST http://192.168.21.5:8088/openapi/v1/algo/packet/delete HTTP/1.1
+{
+    "algo_id": "d169bd4facd3e60ade29c11226e5f45088aed679"
+}
