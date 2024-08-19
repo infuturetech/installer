@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT=/infuturetech
+ROOT=/opt/infuturetech
 
 load() {
     serviceName=$1
@@ -13,7 +13,7 @@ install() {
     project=$1
     serviceName=$2
     echo "try to install ${project}"
-    cp -r ./output/${project} ${ROOT}/
+    cp -rf ./output/${project} ${ROOT}/
     cp ${ROOT}/${project}/${serviceName}.service /etc/systemd/system/
     load ${serviceName}
 }
@@ -43,7 +43,7 @@ prepare() {
     cd -
 }
 
-prepare
+# prepare
 
 mkdir -p ${ROOT}
 
