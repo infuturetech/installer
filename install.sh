@@ -28,7 +28,7 @@ deployInstall() {
     project=deploy
 
     mkdir -p ${ROOT}/${project}
-    cp -r ./metrics ${ROOT}/${project}
+    cp -r ./exporter ${ROOT}/${project}
     cp ${ROOT}/${project}/exporter/node_exporter.service /etc/systemd/system/
     load node_exporter
     cd -
