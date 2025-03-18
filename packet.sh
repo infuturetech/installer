@@ -16,16 +16,27 @@ build() {
     cd -
 }
 
-build algo-manager-service feat/v2
-build client feat/v2
+buildInDocker() {
+    project=${ROOT}/$1
+    branch=$2
+    echo "start to build project [${project}] in docker with branch [${branch}]"
+    cd ${project}
+    git checkout ${branch}
+    sudo ./build_in_docker.sh
+    sudo chown -R nvidia:nvidia ./output
+    mv ./output ${ROOT}/installer/output/$1
+    cd -
+}
+
+buildInDocker algo-manager-service main
+build client main
 build config-manager-service main
 build deploy main
-build image-manager-service feat/v2
-build manage-core-service main
+build image-manager-service main
 build open-gateway main
 build system-manager-service main
-build video-ingress-service feat/v2
-build video-process-service feat/v2
+build video-ingress-service main
+build video-process-service main
 
 SUFFIX_GIT=$(git rev-parse --short HEAD)
 SUFFIX_DATE=$(date "+%Y%m%d")

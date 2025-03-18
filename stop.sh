@@ -8,9 +8,8 @@ stop() {
 stop cms
 stop ams
 stop ims
-stop mcs
 stop gateway
 stop sms
 stop vis
 stop vps
-docker-compose -f /infuturetech/docker-compose.yml down 
+docker-compose -f /opt/infuturetech/docker-compose.yml down 
