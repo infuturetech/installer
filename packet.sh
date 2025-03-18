@@ -28,15 +28,15 @@ buildInDocker() {
     cd -
 }
 
-buildInDocker algo-manager-service wqg/v4_lua_algo
-build client feat/v4
-build config-manager-service feat/v4
+buildInDocker algo-manager-service main
+build client main
+build config-manager-service main
 build deploy main
-build image-manager-service feat/v4
-build open-gateway feat/v4
-build system-manager-service feat/v4
-build video-ingress-service feat/v4
-build video-process-service feat/v4
+build image-manager-service main
+build open-gateway main
+build system-manager-service main
+build video-ingress-service main
+build video-process-service main
 
 SUFFIX_GIT=$(git rev-parse --short HEAD)
 SUFFIX_DATE=$(date "+%Y%m%d")
